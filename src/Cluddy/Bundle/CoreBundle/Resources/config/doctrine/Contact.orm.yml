@@ -1,0 +1,8 @@
+Cluddy\Bundle\CoreBundle\Entity\Contact:
+   type: entity
+   table: contacts
+   id:
+       id:
+           type: integer
+           generator:
+               strategy: auto   

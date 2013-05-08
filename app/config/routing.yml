@@ -1,0 +1,9 @@
+cluddy_core:
+    resource: "@CluddyCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+# FOSUserBundle
+_users:
+    resource: "@CluddyUserBundle/Resources/config/routing.yml"
+    prefix:   /

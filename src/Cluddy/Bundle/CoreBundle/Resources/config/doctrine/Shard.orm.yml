@@ -1,0 +1,8 @@
+Cluddy\Bundle\CoreBundle\Entity\Shard:
+   type: mappedSuperclass
+   repositoryClass: Cluddy\Bundle\CoreBundle\Repository\CoreRepository
+   id:
+       id:
+           type: integer
+           generator:
+               strategy: auto
