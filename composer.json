@@ -21,7 +21,8 @@
 	"phpspec/phpspec": "*",
 	"friendsofsymfony/user-bundle": "*",
 	"friendsofsymfony/jsrouting-bundle": "~1.1",
-	"gedmo/doctrine-extensions": "*"
+	"gedmo/doctrine-extensions": "*",
+	"doctrine/data-fixtures": "*"
     },
     "scripts": {
         "post-install-cmd": [
