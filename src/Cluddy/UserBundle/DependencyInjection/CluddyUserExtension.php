@@ -1,11 +1,11 @@
 <?php 
 namespace Cluddy\UserBundle\DependencyInjection;
 
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\YmlFileLoader;
+use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+use Symfony\Component\DependencyInjection\Loader;
+
 
 class CluddyUserExtension extends Extension
 {
@@ -14,8 +14,8 @@ class CluddyUserExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        $loader = new YmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('routing.yml');
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('services.yml');
     }
 
 }

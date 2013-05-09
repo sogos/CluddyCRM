@@ -1,0 +1,9 @@
+Cluddy\Bundle\CoreBundle\Entity\BaseCompany:
+    type: mappedSuperclass
+    fields:
+        city:
+           name: string
+           length: 255
+        industry:
+           type: string
+           length: 255

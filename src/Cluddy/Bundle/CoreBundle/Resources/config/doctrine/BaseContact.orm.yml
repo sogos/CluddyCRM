@@ -1,0 +1,2 @@
+Cluddy\Bundle\CoreBundle\Entity\BaseContact:
+   type: mappedSuperclass

@@ -1,0 +1,6 @@
+Cluddy\Bundle\CoreBundle\Entity\BaseEmailAddress:
+    type: mappedSuperclass
+    fields:
+        address:
+           name: string
+           length: 255

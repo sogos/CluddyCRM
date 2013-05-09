@@ -1,8 +1,27 @@
 Cluddy\Bundle\CoreBundle\Entity\Shard:
-   type: mappedSuperclass
-   repositoryClass: Cluddy\Bundle\CoreBundle\Repository\CoreRepository
-   id:
-       id:
-           type: integer
-           generator:
-               strategy: auto
+    type: mappedSuperclass
+    repositoryClass: Cluddy\Bundle\CoreBundle\Repository\CoreRepository
+    gedmo:
+        soft_deleteable:
+            field_name: deletedAt
+        loggable:
+            logEntryClass: Gedmo\Loggable\Entity\LogEntry      
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: auto
+    fields:               
+        created:
+            type: date
+            gedmo:
+                timestampable:
+                    on: create
+        updated:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: date
+            nullable: true                                   

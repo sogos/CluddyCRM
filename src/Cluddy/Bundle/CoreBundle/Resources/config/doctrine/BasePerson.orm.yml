@@ -1,0 +1,12 @@
+Cluddy\Bundle\CoreBundle\Entity\BasePerson:
+    type: mappedSuperclass
+    fields:
+        firstname:
+           type: string
+           length: 255
+        lastname:
+           type: string
+           length: 255
+        title:
+           type: string
+           length: 255

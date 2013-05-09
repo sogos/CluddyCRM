@@ -1,0 +1,15 @@
+Cluddy\Bundle\CoreBundle\Entity\BaseAddress:
+    type: mappedSuperclass
+    fields:
+        city:
+           type: string
+           length: 255
+        postalcode:
+           type: string
+           length: 255
+        street:
+           type: string
+           length: 255
+        number:
+           type: string
+           length: 255           
