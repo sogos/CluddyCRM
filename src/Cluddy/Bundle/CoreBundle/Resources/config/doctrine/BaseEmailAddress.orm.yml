@@ -3,4 +3,4 @@ Cluddy\Bundle\CoreBundle\Entity\BaseEmailAddress:
     fields:
         address:
            name: string
-           length: 255
+           length: 255	

@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        {% javascripts 
+        '@CluddyCoreBundle/Resources/public/js/html5shiv.js'
+        %}
+         <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        <![endif]-->   
+
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+       <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container-fluid">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#"><i class="icon-leaf"></i> CluddyCRM</a>
+            <div class="nav-collapse collapse">
+                <p class="navbar-text pull-right">
+                  Logged in as <a href="#" class="navbar-link">Username</a>
+              </p>
+              <ul class="nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+  </div>
+</div>
+<div class="container-fluid">
+   <div class="row-fluid">
+    <div class="span3">
+      <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+          <li class="nav-header">Sidebar</li>
+          <li class="active"><a href="#">Link</a></li>
+          <li><a href="#"><i class="icon-repeat"></i>Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li class="nav-header">Sidebar</li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li class="nav-header">Sidebar</li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+      </ul>
+  </div><!--/.well -->
+</div><!--/span-->
+<div class="span9">
+
+
+
+
+    <i class="icon-flag icon-4x pull-left icon-border"></i>
+    <a class="btn btn-large btn-danger" href="#">
+  <i class="icon-book icon-spin icon-2x pull-left"></i>Font Awesome<br>Version 3.0</a>
+    {% block body %}
+    {% endblock %}
+</div>
+{% block javascripts %}
+{% javascripts 
+    '@CluddyCoreBundle/Resources/public/js/jquery-1.9.1.min.js'
+    '@CluddyCoreBundle/Resources/public/js/bootstrap.min.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% endblock %}
+    {% block stylesheets %}
+    {% stylesheets 
+    '@CluddyCoreBundle/Resources/public/css/bootstrap.min.css'
+    '@CluddyCoreBundle/Resources/public/css/bootstrap-responsive.min.css'
+    '@CluddyCoreBundle/Resources/public/css/font-awesome.min.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    {% stylesheets '@CluddyCoreBundle/Resources/public/css/font-awesome-ie7.min.css' %}
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        <![endif]-->
+        {% endstylesheets %}
+        <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+        @media (max-width: 980px) {
+            /* Enable use of floated navbar text */
+            .navbar-text.pull-right {
+              float: none;
+              padding-left: 5px;
+              padding-right: 5px;
+          }
+      }
+      </style>
+      {% endblock %}
+  </div>
+</body>
 </html>
